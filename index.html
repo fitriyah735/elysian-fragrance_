@@ -1,0 +1,143 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Elysian Fragrance — Kemewahan dalam Setiap Tetes</title>
+  <meta name="description" content="Elysian Fragrance — parfum mewah dengan nuansa gold, hitam, dan silver.">
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+  <link rel="icon" href="assets/svg/perfume_1.svg">
+</head>
+<body>
+  <header class="container header">
+    <div class="brand">
+      <div class="logo"><span>EF</span></div>
+      <div>
+        <div class="badge">Elysian Fragrance</div>
+        <div class="small">Jalan Bolak Balik No. 01, Bogor</div>
+      </div>
+    </div>
+    <div class="cta">
+      <button id="checkout" class="btn btn-primary">Checkout</button>
+      <button class="btn btn-outline">Keranjang <span id="cart-count">0</span></button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="card">
+        <div class="media">
+          <img src="assets/svg/perfume_1.svg" alt="Botol parfum mewah">
+        </div>
+        <div class="body">
+          <h1>Kemewahan, Disempurnakan.</h1>
+          <p class="section-sub">Koleksi parfum premium dengan komposisi elegan, dipadukan kemilau emas, hitam, dan silver.</p>
+          <div class="cta">
+            <a href="#terlaris" class="btn btn-primary">Lihat Terlaris</a>
+            <a href="#varian" class="btn btn-outline">Semua Varian</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="media">
+          <!-- "Video" Animasi Parfum: SVG animasi mulus, ringan untuk GitHub Pages -->
+          <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" aria-label="Animasi parfum">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1">
+                <stop offset="0%" stop-color="#d4af37"/>
+                <stop offset="100%" stop-color="#c0c0c0"/>
+              </linearGradient>
+            </defs>
+            <circle cx="160" cy="160" r="120" fill="none" stroke="url(#g1)" stroke-width="2" opacity="0.4"/>
+            <g transform="translate(40,20)">
+              <image href="assets/svg/perfume_3.svg" width="240" height="280">
+                <animateTransform attributeName="transform" type="translate" values="0,0;0,-4;0,0" dur="3s" repeatCount="indefinite"/>
+              </image>
+            </g>
+            <g>
+              <circle cx="60" cy="60" r="2">
+                <animate attributeName="r" values="2;4;2" dur="2.6s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="1;0;1" dur="2.6s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="260" cy="230" r="2">
+                <animate attributeName="r" values="2;4;2" dur="2.6s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="1;0;1" dur="2.6s" repeatCount="indefinite"/>
+              </circle>
+            </g>
+          </svg>
+        </div>
+        <div class="body">
+          <h2>Video Animasi Parfum</h2>
+          <p class="section-sub">Animasi SVG halus menampilkan kilau botol — ringan & ideal untuk GitHub Pages.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="terlaris">
+      <div class="section-header">
+        <h2>Produk Terlaris</h2>
+        <div class="section-sub">Maksimal 5 item</div>
+      </div>
+      <div class="slider">
+        <div class="slides"></div>
+        <div class="slider-controls">
+          <button id="prev">‹</button>
+          <button id="next">›</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="varian">
+      <div class="section-header">
+        <h2>Varian & Harga Premium</h2>
+        <div class="section-sub">Harga tinggi untuk kualitas eksklusif</div>
+      </div>
+      <div class="grid"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>Kritik & Saran</h2>
+        <div class="section-sub">Kami siap meningkatkan pengalaman Anda</div>
+      </div>
+      <div class="kontak">
+        <form class="form" onsubmit="event.preventDefault(); alert('Terima kasih! Pesan Anda sudah terkirim.'); this.reset();">
+          <input class="input" type="text" name="nama" placeholder="Nama"/>
+          <input class="input" type="email" name="email" placeholder="Email"/>
+          <textarea class="input" name="pesan" placeholder="Tulis kritik & saran..."></textarea>
+          <button class="btn btn-primary" type="submit">Kirim</button>
+        </form>
+        <div>
+          <div class="badge">Alamat Toko</div>
+          <p>Jalan Bolak Balik No. 01, Bogor</p>
+          <p class="small">Buka: 10.00 — 21.00 WIB</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>Testimoni Pelanggan</h2>
+        <div class="section-sub">Tulis pengalaman Anda</div>
+      </div>
+      <div class="testimonials" id="testi-wrap"></div>
+      <form id="testi-form" class="form" style="margin-top:14px">
+        <input class="input" name="name" placeholder="Nama"/>
+        <input class="input" name="city" placeholder="Kota"/>
+        <textarea class="input" name="text" placeholder="Tulis testimoni Anda..."></textarea>
+        <button class="btn btn-outline" type="submit">Kirim Testimoni</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © <span id="y"></span> Elysian Fragrance • Kemewahan dalam setiap tetes
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
